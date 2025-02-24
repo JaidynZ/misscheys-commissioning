@@ -1,0 +1,253 @@
+/* I couldn't figure out how to make the arrows centered with the image, but I don't mind how it turned
+out either way */
+
+/* Load Fonts */
+@font-face {
+    font-family: "Acme Gothic Semibold";
+    src: url("assets/fonts/Acme-Gothic-Semibold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mendl Sans Dusk";
+    src: url("assets/fonts/Mendl-Sans-Dusk.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --h1-font: 32px "Acme Gothic Semibold", sans-serif;
+    --h2-font: italic 26px "Acme Gothic Semibold", sans-serif;
+    --body-font: 20px "Mendl Sans Dusk", sans-serif;
+
+    --purple-dark-84708D: rgb(132, 112, 141);
+    --purple-medium-9A8AA9: rgb(153, 138, 169);
+    --purple-light-A3A1B7: rgb(163, 161, 183);
+
+    --blue-medium-BFD8D8: rgb(191, 216, 216);
+    --blue-light-CEE9E4: rgb(206, 233, 228);
+}
+
+/* Reset Styles */
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* Headings */
+
+h1 {
+    font: var(--h1-font);
+}
+
+h2 {
+    font: var(--h2-font);
+}
+
+/* Header */
+
+header {
+    background-color: var(--purple-medium-9A8AA9);
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav a:nth-child(2) {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+/* Body */
+body {
+    background-color: white;
+}
+.gradient-background {
+    background-image: linear-gradient(var(--blue-light-CEE9E4) 70%, white);
+    border: 10px solid white;
+    border-radius: 50px;
+}
+
+.welcome-carousel {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 100%; 
+}
+
+.carousel-container {
+    text-align: center;
+}
+
+.carousel-image {
+    background-color: var(--blue-light-CEE9E4);
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.welcome-carousel h1 {
+    font: var(--h1-font);
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.welcome-carousel a:first-of-type, .welcome-carousel a:last-of-type  {
+    justify-self: center;
+    align-self: center;
+}
+
+.commissioning-interaction {
+    background-color: var(--purple-medium-9A8AA9);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px 15px 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.commissioning-interaction h2 {
+    font: var(--h1-font);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.commissioning-interaction a {
+    display: inline-block;
+    background-color: var(--purple-light-A3A1B7);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font: var(--h2-font);
+    color: black;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.commissioning-interaction a:hover {
+    text-decoration: underline;
+}
+
+.commissioning-interaction p {
+    margin-top: 40px;
+    background-color: var(--purple-medium-9A8AA9);
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.warning-text {
+    display: block;
+    text-align: center;
+    background-color: var(--purple-medium-9A8AA9);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    margin: 40px auto 20px;
+    max-width: fit-content;
+    font: var(--body-font);
+}
+
+p {
+    font: var(--body-font);
+}
+
+/* Footer */
+footer {
+    background-color: var(--purple-light-A3A1B7);
+    padding: 20px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px 80px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.footer-content a,
+.grid-links {
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--purple-medium-9A8AA9);
+}
+
+.footer-grid a {
+    font: var(--body-font);
+}
+
+.media-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    text-align: center;
+}
+
+.footer-contact a {
+    font: var(--body-font);
+}
+
+/* Resources - A lot of these I know already but I used these to refresh my memory
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+https://www.w3schools.com/css/css3_variables.asp
+https://www.w3schools.com/css/css3_gradients.asp
+https://www.w3schools.com/cssref/css3_pr_gap.php
+https://www.w3schools.com/css/css_grid.asp
+https://www.w3schools.com/css/css3_object-fit.asp
+https://www.w3schools.com/cssref/pr_text_white-space.php
+https://www.w3schools.com/cssref/css3_pr_transform.php
+*/
