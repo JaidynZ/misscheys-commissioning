@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- For viewing, I made my live server tab 1/4th of my screen size, which is 1920 x 1080. It may respond
- different to other sizes. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,22 +13,34 @@
             <a href="index.html">
                 <img src="assets/images/logo.png" alt="Misschey's Art Commissioning Logo">
             </a>
+            <!-- Desktop navigation menu -->
+             <div class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="tos.html">Terms of Service</a>
+                <a href="services.html">Services</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+             </div>
+            <!-- Search Button -->
             <a href="#" aria-label="Open search">
                 <img src="assets/images/search.png" alt="Search icon"> <!-- This image would, upon interaction, open the search -->
             </a>
+            <!-- Mobile/Tablet Hamburger Menu -->
             <a href="#" aria-label="Open navigation menu">
                 <img src="assets/images/hamburger-menu.png" alt="Hamburger menu icon"> <!-- This image would link to the navigation overlay-->
             </a>
         </nav>
     </header>
     <div class="gradient-background">
+        <!-- Image Carousel - Placeholder for JS -->
         <div class="welcome-carousel">
             <a href="#"><img src="assets/images/arrow-left.png" alt="Arrow pointing left"></a>
             <div class="carousel-container">
                 <div class="carousel-image">
                     <img src="assets/images/placeholder-image.png" alt="Temporary placeholder for upcoming carousel images">
                 </div>
-                <h1>Welcome to Miss Chey's Commissioning Site!</h1>
+                <h1 class="welcome-message">Welcome to Miss Chey's Commissioning Site!</h1>
             </div>
             <a href="#"><img src="assets/images/arrow-right.png" alt="Arrow pointing right"></a>
         </div>
@@ -43,11 +53,12 @@
     </div>
     <footer class="footer-contact">
         <div class="footer-content">
-            <h1>Contact Me!</h1>
-            <a href="mailto:misscheyartcommissions@gmail.com">misscheyartcommissions@gmail.com</a>
-
+            <div class="contact-me">
+                <h1 class="grid-title">Contact Me!</h1>
+                <a href="mailto:misscheyartcommissions@gmail.com">misscheyartcommissions@gmail.com</a>
+            </div>
             <div class="footer-links">
-                <h2>Quick Links</h2>
+                <h2 class="grid-title">Quick Links</h2>
                 <div class="footer-grid">
                     <a href="index.html" class="grid-links">Home</a>
                     <a href="about.html" class="grid-links">About</a>
