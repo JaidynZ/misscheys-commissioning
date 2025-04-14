@@ -16,9 +16,9 @@
 /* Variables */
 
 :root {
-    --h1-font: 28px "Acme Gothic Semibold", sans-serif;
-    --h2-font: italic 26px "Acme Gothic Semibold", sans-serif;
-    --body-font: 22px "Mendl Sans Dusk", sans-serif;
+    --h1-font: 24px "Acme Gothic Semibold", sans-serif;
+    --h2-font: italic 20px "Acme Gothic Semibold", sans-serif;
+    --body-font: 18px "Mendl Sans Dusk", sans-serif;
 
     --purple-dark-84708D: rgb(132, 112, 141);
     --purple-medium-9A8AA9: rgb(153, 138, 169);
@@ -68,6 +68,14 @@ header nav div {
 
 .mobile-search {
     translate: 20vw;
+}
+
+.page-banner {
+    background-color: var(--purple-dark-84708D);
+    margin-top: 1vh;
+    padding: 0.5em;
+    text-align: center;
+    color: white;
 }
 
 /* Body */
@@ -124,6 +132,46 @@ header nav div {
     border-radius: 20vw;
     max-width: 85vw;
     padding: 1vw;
+}
+
+.history-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3vw;
+}
+
+.history-title img {
+    width: 50%;
+    height: 50%;
+}
+
+.my-history p {
+    padding: 5vw;
+    text-align: center;
+}
+
+.gallery-title {
+    background-color: var(--purple-light-A3A1B7);
+    text-align: center;
+    margin: auto;
+    width: 8em;
+    padding: 1em;
+    border-radius: 2em;
+    color: white;
+    margin-bottom: 2vh;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    align-items: center;
+}
+
+.gallery img {
+    width: 80%;
 }
 
 /* Footer */
@@ -191,9 +239,9 @@ footer {
 @media screen and (min-width: 768px) {
     /* Variables */
     :root {
-        --h1-font: 38px "Acme Gothic Semibold", sans-serif;
-        --h2-font: italic 36px "Acme Gothic Semibold", sans-serif;
-        --body-font: 32px "Mendl Sans Dusk", sans-serif;
+        --h1-font: 32px "Acme Gothic Semibold", sans-serif;
+        --h2-font: italic 28px "Acme Gothic Semibold", sans-serif;
+        --body-font: 24px "Mendl Sans Dusk", sans-serif;
     }
 
     /* Disable Mobile View */
@@ -223,6 +271,16 @@ footer {
         padding-top: 1vh;
     }
 
+    .gallery {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+    }
+
+    .gallery-title {
+        margin-bottom: 5vh;
+    }
+
     /* Footer */
     .tablet-media-logos {
         display: flex;
@@ -238,9 +296,9 @@ footer {
 @media screen and (min-width: 1024px) {
         /* Variables */
         :root {
-            --h1-font: 30px "Acme Gothic Semibold", sans-serif;
-            --h2-font: italic 28px "Acme Gothic Semibold", sans-serif;
-            --body-font: 24px "Mendl Sans Dusk", sans-serif;
+            --h1-font: 28px "Acme Gothic Semibold", sans-serif;
+            --h2-font: italic 26px "Acme Gothic Semibold", sans-serif;
+            --body-font: 22px "Mendl Sans Dusk", sans-serif;
         }
 
         /* Clear Styles */
@@ -266,6 +324,7 @@ footer {
         .commission-openings {
             border: none;
         }
+
         /* Header */
         
         .desktop-nav {
@@ -283,6 +342,11 @@ footer {
         }
 
         /* Body */
+        .gradient-background-about {
+            background-image: linear-gradient(var(--blue-light-CEE9E4) 85%, white);
+            border: 3vw solid white;
+            border-radius: 10vw;
+        }
         .welcome-message {
             transform: translate(0vw, -35em);
             background-image: linear-gradient(var(--blue-light-CEE9E4) 10%, white);
@@ -325,12 +389,28 @@ footer {
             transform: translate(32vw, -20.5em);
         }
 
+        .history-title {
+            flex-direction: column;
+            gap: 5vh;
+        }
+
+        .gallery-title {
+            width: 60vw;
+        }
+
+        .my-history p {
+            line-height: 5vh;
+        }
+
+        .history-title img {
+            width: 30%;
+            height: auto;
+        }
         /* Footer */
 
         .desktop-footer {
             display: flex;
             align-items: center;
-            margin-top: -25em;
         }
         
         .desktop-contact-me, .desktop-email-link {
@@ -351,6 +431,8 @@ footer {
             background-color: var(--purple-dark-84708D);
             max-width: 15em;
             text-align: center;
+            border-radius: 3vw;
+            padding: 0.5em;
         }
 
         .desktop-email-link:hover {
@@ -369,7 +451,7 @@ footer {
             border-radius: 3vw;
             color: white;
             text-align: center;
-            padding: 0.5em;
+            padding: 1em;
         }
 
         .desktop-quick-links-grid-items:hover {
