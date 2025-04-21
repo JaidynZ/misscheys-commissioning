@@ -56,6 +56,10 @@ p {
     font: var(--body-font);
 }
 
+li {
+    font: var(--body-font);
+}
+
 /* Header */
 
 header nav div {
@@ -144,7 +148,7 @@ header nav div {
 
 .history-title img {
     width: 50%;
-    height: 50%;
+    height: auto;
 }
 
 .my-history p {
@@ -172,6 +176,50 @@ header nav div {
 
 .gallery img {
     width: 80%;
+}
+
+.tos-explanation, .tos-terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tos-explanation {
+    gap: 4vh;
+}
+
+.tos-explanation img {
+    margin-top: 4vh;
+}
+
+.tos-terms {
+    list-style-type: none;
+}
+
+.tos-terms img {
+    margin: 4vh;
+}
+
+.tos-explanation img, .tos-terms img {
+    width: 50%;
+    height: auto;
+}
+
+.tos-guidelines {
+    border-radius: 1em;
+    text-align: center;
+    border: 20px solid transparent;
+    color: white;
+}
+
+.tos-background-color {
+    background-color: var(--purple-medium-9A8AA9);
+    border-radius: 3vw;
+}
+
+.tos-guidelines h1, .tos-guidelines p {
+    padding: 1vh;
 }
 
 /* Footer */
@@ -281,6 +329,31 @@ footer {
         margin-bottom: 5vh;
     }
 
+    .tos-explanation {
+        gap: 10vh;
+    }
+
+    .tos-explanation h1 {
+        margin: 1vh;
+    }
+
+    .tos-explanation img {
+        margin-top: 10vh;
+        width: 60%;
+        height: auto;
+    }
+
+    .tos-terms-bad, .tos-terms-good {
+        margin-bottom: 4vh;
+    }
+
+    .tos-terms ul {
+        list-style-type: none;
+    }
+
+    .tos-guidelines p {
+        padding: 3vh;
+    }
     /* Footer */
     .tablet-media-logos {
         display: flex;
@@ -304,6 +377,10 @@ footer {
         /* Clear Styles */
         .gradient-background {
             background-image: none;
+        }
+
+        .tos-explanation img {
+            margin-top: 0;
         }
 
         /* Disable Tablet/Mobile Views */
@@ -342,7 +419,7 @@ footer {
         }
 
         /* Body */
-        .gradient-background-about {
+        .gradient-background-desktop {
             background-image: linear-gradient(var(--blue-light-CEE9E4) 85%, white);
             border: 3vw solid white;
             border-radius: 10vw;
@@ -406,6 +483,29 @@ footer {
             width: 30%;
             height: auto;
         }
+
+        .tos-explanation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10vh 5vh 0 5vh
+        }
+
+        .tos-explanation img {
+            width: 40%;
+            height: auto;
+        }
+
+        .tos-terms {
+            flex-direction: row;
+            margin-top: 10vh;
+        }
+
+        .tos-guidelines {
+            margin-bottom: 2vh;
+        }
+
         /* Footer */
 
         .desktop-footer {
