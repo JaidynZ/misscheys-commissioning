@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="script.js"></script>
+    <title>Miss Chey's Commissioning</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <!-- Logo -->
+                <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miss Chey's Commissioning logo"></a>
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="tos.html">Terms of Service</a>
+                    <a href="services.html">Services</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <!-- Mobile/Tablet Navigation -->
+                <span class="nav-menu desktop-disable" onclick="openNav()"><img src="assets/images/hamburger-menu.png" alt="Opens the navigation menu"></span>
+            
+                <div id="hamburger-nav" class="nav-overlay">
+
+                    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Miss Chey's Commissioning logo"></a>
+                    <a href="javascript:void(0)" class="close-button" onclick="closeNav()"><img src="assets/images/close-button.png" alt="Closes the navigation menu"></a>
+
+                    <div class="nav-content">
+                        <a href="index.html" class="nav-content-links"><span class="color-click">Home</span></a>
+                        <a href="about.html" class="nav-content-links"><span class="color-click">About</span></a>
+                        <a href="tos.html" class="nav-content-links"><span class="color-click">Terms of Service</span></a>
+                        <a href="services.html" class="nav-content-links"><span class="color-click">Services</span></a>
+                        <a href="reviews.html" class="nav-content-links"><span class="color-click">Reviews</span></a>
+                        <a href="contact.html" class="nav-content-links"><span class="color-click">Contact</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="page-banner">
+            <h1>Contact</h1>
+        </div>
+    </header>
+    <div class="gradient-background gradient-background-desktop">
+        <div class="contact-information">
+            <div class="contact-how">
+                <h2>Curious about how to contact me?</h2>
+                <br>
+                <p>You came to the right place! You can contact me through the contact form below! Please take care to fill it out with correct information so I can reach out to you!</p>
+            </div>
+            <div class="contact-informed">
+                <h2>It's important to stay informed!</h2>
+                <br>
+                <p>Sign up to my newsletter to get the most up to date information I release! This could include commission status, wait times, and much more!</p>
+            </div>
+        </div>
+        <div class="newsletter-container">
+            <div class="newsletter-title"><h2><br>Sign up for newsletter & updates!</h2></div>
+            <form name="newsletterForm" onsubmit="return validateNewsletter();" method="post" novalidate>
+                <div class="form-input">
+                    <input type="email" class="email-input" name="email" placeholder="Enter your email...">
+                    <button type="submit" class="submit-button">
+                        <i class="arrow-icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-form-container">
+            <div class="contact-title"><h1>Get in touch directly for any inquiries!</h1></div>
+            <div class="required-info"><p>* - Required</p></div>
+            <form name="contactForm" class="contact-form" onsubmit="return validateForm();" method="post" novalidate>
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-contact-input" placeholder="Enter your name...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" name="email" class="form-contact-input" placeholder="Enter your email...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-contact-input" placeholder="Enter your phone number...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="contact-submit-button">Submit!</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer for Mobile/Tablet Only -->
+    <footer class="mobile-footer">
+        <div class="contact-me">
+            <h1>Contact Me!</h1>
+            <a href="mailto:misscheyartcommissions@gmail.com"><p class="email-link">misscheyartcommissions@gmail.com</p></a>
+        </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="quick-links-grid">
+                <a href="index.html" class="quick-links-grid-items"><p>Home</p></a>
+                <a href="about.html" class="quick-links-grid-items"><p>About</p></a>
+                <a href="tos.html" class="quick-links-grid-items"><p>TOS</p></a>
+                <a href="services.html" class="quick-links-grid-items"><p>Services</p></a>
+                <a href="reviews.html" class="quick-links-grid-items"><p>Reviews</p></a>
+                <a href="contact.html" class="quick-links-grid-items"><p>Contact</p></a>
+            </div>
+        </div>
+        <div class="follow-me">
+            <h1>Follow Me!</h1>
+            <div class="media-logos">
+                <a href="#"><img src="assets/images/twitter-logo.png" alt="Twitter/X logo"></a>
+                <a href="#"><img src="assets/images/instagram-logo.png" alt="Instagram logo"></a>
+                <a href="#"><img src="assets/images/bluesky-logo.png" alt="Bluesky logo"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer for Desktop Only -->
+    <footer class="desktop-footer">
+        <div class="desktop-contact-me">
+            <h1>Contact Me!</h1>
+            <a href="mailto:misscheyartcommissions@gmail.com"><p class="desktop-email-link">misscheyartcommissions@gmail.com</p></a>
+        </div>
+        <div class="desktop-media-logos">
+            <a href="#"><img src="assets/images/twitter-logo.png" alt="Twitter/X logo"></a>
+            <a href="#"><img src="assets/images/instagram-logo.png" alt="Instagram logo"></a>
+            <a href="#"><img src="assets/images/bluesky-logo.png" alt="Bluesky logo"></a>
+        </div>
+        <div class="desktop-quick-links-grid">
+            <a href="index.html" class="desktop-quick-links-grid-items"><p>Home</p></a>
+            <a href="about.html" class="desktop-quick-links-grid-items"><p>About</p></a>
+            <a href="tos.html" class="desktop-quick-links-grid-items"><p>TOS</p></a>
+            <a href="services.html" class="desktop-quick-links-grid-items"><p>Services</p></a>
+            <a href="reviews.html" class="desktop-quick-links-grid-items"><p>Reviews</p></a>
+            <a href="contact.html" class="desktop-quick-links-grid-items"><p>Contact</p></a>
+        </div>
+    </footer>
+</body>
+</html>
